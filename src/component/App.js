@@ -24,6 +24,7 @@ class App extends React.Component {
 
   async componentDidMount() {
    this.getMovie();
+   console.log("Salam")
   }
 
   getMovie= async()=>{
