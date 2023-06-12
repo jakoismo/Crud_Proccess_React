@@ -62,17 +62,18 @@ class App extends React.Component {
 
   addMovie = async (movie2) => {
 
-    var random_string='';
-    var characters="ABCDEFGH0123456789abcdefgh";
-    for(let i=0;i<characters.length;i++){
-      random_string+=characters.charAt(Math.floor(Math.random()*characters.length))
-    }
-    movie2.id=random_string;
+    // var random_string='';
+    // var characters="ABCDEFGH0123456789abcdefgh";
+    // for(let i=0;i<characters.length;i++){
+    //   random_string+=characters.charAt(Math.floor(Math.random()*characters.length))
+    // }
+    // movie2.id=random_string;
 
     console.log(movie2)
     const url = "http://localhost:3002/movie";
      await axios.post(url,movie2);
-    this.setState({ movie:this.state.movie.concat([movie2])});
+    // this.setState({ movie:this.state.movie.concat([movie2])});
+    this.getMovie();
     console.log(this.state.movie)
   };
 
